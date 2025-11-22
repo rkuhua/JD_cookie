@@ -1,12 +1,12 @@
 #!name = 京东Cookie自动提交
-#!author = 你的名字
+#!author = rkuhua
 #!desc = 自动抓取京东Cookie并提交到后端API (rrror.top:9988)
 #!date = 2025-11-22
 #!icon = https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png
 #!openUrl = http://rrror.top:9988
 
 [Script]
-http-request ^https:\/\/(api\.m|me-api)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?) script-path=https://raw.githubusercontent.com/你的用户名/你的仓库/main/ios/jdck.js, requires-body=false, timeout=10, tag=京东Cookie获取
+http-request ^https:\/\/(api\.m|me-api)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?) script-path=https://raw.githubusercontent.com/rkuhua/JD_cookie/main/ios/jdck.js, requires-body=false, timeout=10, tag=京东Cookie获取
 
 [Mitm]
 hostname = api.m.jd.com, me-api.jd.com

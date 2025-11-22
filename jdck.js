@@ -32,6 +32,8 @@ if (!cookie) {
         let lastCookie = getData(COOKIE_KEY);
         if (lastCookie === jdCookie) {
             console.log('[京东Cookie] Cookie未变化，跳过提交');
+            // 即使未变化也显示通知
+            notify('京东Cookie', '已是最新 ✅', `账号: ${pt_pin}\n状态: Cookie未变化\n操作: 跳过提交`);
             $done({});
         } else {
             // 提交到API

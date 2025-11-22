@@ -4,7 +4,7 @@
 
 [rewrite_local]
 # 京东Cookie获取
-^https:\/\/(api\.m|me-api)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?) url script-request-header https://raw.githubusercontent.com/rkuhua/JD_cookie/main/jdck.js
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-request-header https://raw.githubusercontent.com/rkuhua/JD_cookie/main/jdck.js
 
 [mitm]
-hostname = api.m.jd.com, me-api.jd.com
+hostname = api.m.jd.com

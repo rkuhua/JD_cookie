@@ -1,0 +1,10 @@
+# 京东Cookie自动提交 - Quantumult X 重写订阅
+# 使用方法：复制下方链接添加到重写订阅
+# https://raw.githubusercontent.com/你的用户名/你的仓库/main/ios/jdck.snippet
+
+[rewrite_local]
+# 京东Cookie获取
+^https:\/\/(api\.m|me-api)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?) url script-request-header https://raw.githubusercontent.com/你的用户名/你的仓库/main/ios/jdck.js
+
+[mitm]
+hostname = api.m.jd.com, me-api.jd.com

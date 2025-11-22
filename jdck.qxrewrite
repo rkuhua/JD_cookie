@@ -1,0 +1,12 @@
+#!name = 京东Cookie自动提交
+#!desc = 自动抓取京东Cookie并提交到后端API (rrror.top:9988)
+#!author = rkuhua
+#!homepage = https://github.com/rkuhua/JD_cookie
+#!icon = https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png
+
+[rewrite_local]
+# 京东Cookie获取
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-request-header https://raw.githubusercontent.com/rkuhua/JD_cookie/main/jdck.js
+
+[mitm]
+hostname = api.m.jd.com
